@@ -14,13 +14,13 @@ import time
 
 from collections import defaultdict
 
-from joblib import Memory
 from pathlib import Path
-from tabulate import tabulate
+#from tabulate import tabulate
 
 import numpy as np
 
-mem = Memory(Path(os.getenv('HOME')) / '.cache' / 'joblib', verbose=0)
+#from joblib import Memory
+#mem = Memory(Path(os.getenv('HOME')) / '.cache' / 'joblib', verbose=0)
 
 tocheck = [(0, 1, 2), (3, 4, 5), (6, 7, 8),
            (0, 3, 6), (1, 4, 7), (2, 5, 8),
@@ -93,7 +93,7 @@ def printstate(s):
   ps[s == O] = "O"
   print(tabulate(ps.reshape((3, 3)), tablefmt="grid"))
 
-@mem.cache
+#@mem.cache
 def getstates(s):
   return _getstates(s, p=0)
 
