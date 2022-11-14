@@ -1,10 +1,13 @@
 # valueiter
 
-[valueiter.py](valueiter.py) builds a tabular value function V and then extracts the optimal policy pi.
+[valueiter.py](valueiter.py) builds a tabular value function V and then extracts the optimal policy pi for Tic Tac Toe.
+The value function for player X is defined with respect to an opponent that plays randomly.
 
 It takes 5 iterations for value iteration to converge.
 
 Requires numpy.
+
+Sample output:
 
 ```shell
 $ python valueiter.py
